@@ -1,0 +1,75 @@
+@import '_common.scss';
+
+.slide-1{
+    width: 100%;
+    position: relative;
+    margin-bottom: 6px;
+    .s1-nav{
+        color: $w;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 4%; top: 34%;
+        span{
+            display: inline-block;
+        }
+        span:nth-of-type(1){
+            margin-right: 80px;
+            padding-bottom: 2px;
+        }
+        span:nth-of-type(2){
+            width: 100px;
+            border: 1px solid $sb;
+            transform: scaleY(.4);
+            position: relative;
+            &::after{
+                content: '';
+                width: 35%;
+                border: 1px solid $w;
+                position: absolute;
+                left: -1px; top: -1px;
+
+
+            }
+        }
+        span:nth-of-type(3){
+            margin-left: 80px;
+            padding-top: 2px;
+        }
+    }
+    .more{
+        color: $w;
+        font-size: 13px;
+        letter-spacing: 2px;
+        transform: rotate(-90deg);
+        position: absolute;
+        right: 0; bottom: 65px;
+    }
+    .s1-img{
+        display: flex;
+        overflow: hidden;
+    }
+}
+.slide-2{
+    overflow: hidden;
+    .s2-img{
+        display: flex;
+        box-shadow: 5px 10px 10px rgb(193, 193, 193);
+    }
+    .s2-nav{
+        width: 96%;
+        margin: 30px auto;
+        border: 2px solid $sw;
+        position: relative;
+        &::after{
+            content: '';
+            width: 50%;
+            border: 2px solid $b;
+            position: absolute;
+            left: -2px; top: -2px;
+        }
+    }
+}
