@@ -211,9 +211,8 @@ header .menu .s-list a {
 }
 
 header .menu .my {
-  width: 85%;
+  width: 100%;
   color: #fff;
-  display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,24 +221,26 @@ header .menu .my {
           justify-content: center;
   text-align: center;
   position: fixed;
-  left: calc(50% - 200px);
-  bottom: 42px;
+  left: 8%;
+  bottom: 40px;
 }
 
 header .menu .my li {
-  margin: 0 15px;
+  margin: 0 16px;
   position: relative;
 }
 
 header .menu .my li::after {
   content: '';
   border: 1px solid #fff;
-  height: 10px;
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+  height: 8px;
   opacity: .4;
   display: inline-block;
   position: absolute;
-  right: -16px;
-  top: 5px;
+  right: -18px;
+  top: 7px;
 }
 
 header .menu .my li:nth-of-type(3)::after {

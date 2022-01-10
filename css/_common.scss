@@ -39,6 +39,7 @@ table {
 $mc: #003594;
 $b: #000;
 $sb: #adadad;
+$sbw: #cdcdcd;
 $sw: #efefef;
 $w: #fff;
 
@@ -172,25 +173,25 @@ header{
             }
         }
         .my{
-            width: 85%;
+            width: 100%;
             color: $w;
-            display: inline-block;
             display: flex;
             justify-content: center;
             text-align: center;
             position: fixed;
-            left: calc(50% - 200px); bottom: 42px;
+            left: 8%; bottom: 40px;
             li{
-                margin: 0 15px;
+                margin: 0 16px;
                 position: relative;
                 &::after{
                     content: '';
                     border: 1px solid $w;
-                    height: 10px;
+                    transform: scaleX(.5);
+                    height: 8px;
                     opacity: .4;
                     display: inline-block;
                     position: absolute;
-                    right: -16px; top: 5px;
+                    right: -18px; top: 7px;
                 }
             }
             li:nth-of-type(3)::after{
