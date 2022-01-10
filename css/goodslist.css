@@ -595,5 +595,94 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.goods-list .bar p {
+  font-size: 14px;
+}
+
+.goods-list .bar p span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003594;
+}
+
+.goods-list .bar div {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.goods-list .bar button {
+  width: 34px;
+  border: none;
+  background-color: #fff;
+}
+
+.goods-list .bar select {
+  width: 120px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #efefef;
+}
+
+.list-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-show figure {
+  text-align: center;
+}
+
+.list-show figure h3 {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+.list-show figure figcaption {
+  font-size: 18px;
+}
+
+.list-show figure figcaption span {
+  font-size: inherit;
+}
+
+.show-more {
+  margin: 80px;
+  text-align: center;
+}
+
+.show-more p {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.show-more p:nth-of-type(2) {
+  margin: 10px;
+  position: relative;
+}
+
+.show-more p:nth-of-type(2) span:nth-of-type(1) {
+  display: inline-block;
+  height: 25px;
+  border: 1px solid #000;
+  -webkit-transform: scaleX(0.5) translateX(-2px);
+          transform: scaleX(0.5) translateX(-2px);
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+.show-more p:nth-of-type(2) span:nth-of-type(2) {
+  display: inline-block;
+  width: 25px;
+  border: 1px solid #000;
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
 }
 /*# sourceMappingURL=goodslist.css.map */
