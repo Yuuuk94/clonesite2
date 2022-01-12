@@ -61,7 +61,7 @@ header{
     max-width: 760px;
     position: fixed;
     top: 0;
-    z-index: 500;
+    z-index: 300;
     .head{
         padding: 10px 10px;
         height: 46px;
@@ -99,17 +99,58 @@ header{
             }
         }
     }
+
+    .title {
+        width: 84px;
+        margin: 0 20px;
+        padding-bottom: 1px;
+        font-size: 0;
+    }
+    .icon{
+        font-size: 0;
+        display: flex;
+        position: absolute;
+        right: 10px; top: calc(50% - 12px);
+        span{
+            width: 20px;
+            margin-left: 24px ;
+        }
+        span:nth-of-type(1){
+            width: 16px;
+            position: relative;
+            &::after{
+                content: '0';
+                width: 13px; height: 13px;
+                background-color: $mc;
+                border-radius: 100%;
+                color: $w;
+                font-size: 11px;
+                text-align: center;
+                line-height: 1;
+                display: block;
+                position: absolute;
+                right: -50%; top: 0;
+            }
+        }
+    }
     .menu{
         width: 100%; height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
+        transition: .8s;
         position: fixed;
-        left: 0; top: 0;
-        z-index: 600;
-        transition: 1s;
-        display: none;
-        .menu.active{
-            display: block;
+        left: -100%; top: 0;
+        z-index: 500;
+        &.active{
+            left: 0;
         }
+        .bg {
+            width: 200%; height: 100vh;
+            transition: 1s;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            &.active{
+                display: block;
+            }
+        }        
         .mobile-menu{
             width: 100%; height: 100vh;
             padding-left: calc(15% + 40px);
@@ -117,13 +158,12 @@ header{
             border-radius: 34px;
             position: absolute;
             left: -15%; top: 0;
-            z-index: 900;
-
-            transform: translateX(-50%);
-        }
-        .mobile-menu.active{
-            transform: translateX(0);
-        }
+            transition: .8s;
+            transform: translateX(-100%);
+            &.active{
+                transform: translateX(0);
+            }
+        }        
         .x{
             width: 30px; height: 60px;
             transform: translateX(-30px);
@@ -201,40 +241,6 @@ header{
                 font-size: 14px;
                 letter-spacing: 1px;
                 text-align: center;
-            }
-        }
-    }
-    .menu.active{display: block;}
-    .title {
-        width: 84px;
-        margin: 0 20px;
-        padding-bottom: 1px;
-        font-size: 0;
-    }
-    .icon{
-        font-size: 0;
-        display: flex;
-        position: absolute;
-        right: 10px; top: calc(50% - 12px);
-        span{
-            width: 20px;
-            margin-left: 24px ;
-        }
-        span:nth-of-type(1){
-            width: 16px;
-            position: relative;
-            &::after{
-                content: '0';
-                width: 13px; height: 13px;
-                background-color: $mc;
-                border-radius: 100%;
-                color: $w;
-                font-size: 11px;
-                text-align: center;
-                line-height: 1;
-                display: block;
-                position: absolute;
-                right: -50%; top: 0;
             }
         }
     }

@@ -55,7 +55,7 @@ header {
   max-width: 760px;
   position: fixed;
   top: 0;
-  z-index: 500;
+  z-index: 300;
 }
 
 header .head {
@@ -111,20 +111,74 @@ header .bugermenu span:nth-of-type(3) {
           transform: translateY(8px) scaleY(0.6);
 }
 
+header .title {
+  width: 84px;
+  margin: 0 20px;
+  padding-bottom: 1px;
+  font-size: 0;
+}
+
+header .icon {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 12px);
+}
+
+header .icon span {
+  width: 20px;
+  margin-left: 24px;
+}
+
+header .icon span:nth-of-type(1) {
+  width: 16px;
+  position: relative;
+}
+
+header .icon span:nth-of-type(1)::after {
+  content: '0';
+  width: 13px;
+  height: 13px;
+  background-color: #003594;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1;
+  display: block;
+  position: absolute;
+  right: -50%;
+  top: 0;
+}
+
 header .menu {
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: .8s;
+  transition: .8s;
   position: fixed;
-  left: 0;
+  left: -100%;
   top: 0;
-  z-index: 600;
+  z-index: 500;
+}
+
+header .menu.active {
+  left: 0;
+}
+
+header .menu .bg {
+  width: 200%;
+  height: 100vh;
   -webkit-transition: 1s;
   transition: 1s;
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
 
-header .menu .menu.active {
+header .menu .bg.active {
   display: block;
 }
 
@@ -137,9 +191,10 @@ header .menu .mobile-menu {
   position: absolute;
   left: -15%;
   top: 0;
-  z-index: 900;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 header .menu .mobile-menu.active {
@@ -251,53 +306,6 @@ header .menu .my a {
   font-size: 14px;
   letter-spacing: 1px;
   text-align: center;
-}
-
-header .menu.active {
-  display: block;
-}
-
-header .title {
-  width: 84px;
-  margin: 0 20px;
-  padding-bottom: 1px;
-  font-size: 0;
-}
-
-header .icon {
-  font-size: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  right: 10px;
-  top: calc(50% - 12px);
-}
-
-header .icon span {
-  width: 20px;
-  margin-left: 24px;
-}
-
-header .icon span:nth-of-type(1) {
-  width: 16px;
-  position: relative;
-}
-
-header .icon span:nth-of-type(1)::after {
-  content: '0';
-  width: 13px;
-  height: 13px;
-  background-color: #003594;
-  border-radius: 100%;
-  color: #fff;
-  font-size: 11px;
-  text-align: center;
-  line-height: 1;
-  display: block;
-  position: absolute;
-  right: -50%;
-  top: 0;
 }
 
 footer .foot {
