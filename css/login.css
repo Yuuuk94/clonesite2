@@ -702,11 +702,7 @@ footer p {
           transform: translateY(2px);
 }
 
-.mem {
-  margin: 0 14px;
-}
-
-.mem form {
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,9 +718,23 @@ footer p {
           justify-content: center;
 }
 
-.mem form input {
+form input {
   padding: 8px 6px;
   border-bottom: 1px solid #cdcdcd;
+}
+
+form button {
+  margin: 16px 0;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #003594;
+  border-radius: 40px;
+}
+
+.mem {
+  margin: 0 14px;
 }
 
 .mem form label {
@@ -756,15 +766,6 @@ footer p {
 .mem form label input[type="radio"]:checked + span::after {
   background: url("../img/login/m-checkbox-on.png") no-repeat center;
   background-size: 100%;
-}
-
-.mem form button {
-  margin: 15px 0;
-  padding: 12px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #003594;
-  border-radius: 40px;
 }
 
 .mem .mem-join {
@@ -818,6 +819,30 @@ footer p {
 }
 
 .nomem {
+  margin: 0 20px;
+  margin-bottom: 80px;
   display: none;
+}
+
+.nomem div {
+  margin: 14px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.nomem form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=login.css.map */

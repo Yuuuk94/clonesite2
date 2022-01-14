@@ -1,0 +1,11 @@
+{
+    "mainBn1":[
+        {"src": "./img/main/main1-1.jpg"},
+        {"src": "./img/main/main1-2.jpg"},
+        {"src": "./img/main/main1-3.jpg"}
+    ],
+    "mainBn2":[
+        {"src": "./img/main/main2-1.jpg"},
+        {"src": "./img/main/main2-2.jpg"}
+    ]
+}

@@ -95,17 +95,28 @@
         }
     }   
 }
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    input{
+        padding: 8px 6px;
+        border-bottom: 1px solid $sbw;
+    }
+    button{
+        margin: 16px 0;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $w;
+        background-color: $mc;
+        border-radius: 40px;
+    }
+}
 .mem{
     margin: 0 14px;
     form{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
-        input{
-            padding: 8px 6px;
-            border-bottom: 1px solid $sbw;
-        }
         label{
             padding: 12px 0;
             line-height: center;
@@ -129,14 +140,6 @@
                 background: url('../img/login/m-checkbox-on.png') no-repeat center;
                 background-size: 100%;
             }
-        }
-        button{
-            margin: 15px 0;
-            padding: 12px;
-            font-weight: bold;
-            color: $w;
-            background-color: $mc;
-            border-radius: 40px;
         }
     }
     .mem-join{
@@ -174,7 +177,22 @@
             margin: 6px 0;
         }
     }
+    // display: none;
 }
 .nomem{
-    display: none;
+    margin: 0 20px;
+    margin-bottom: 80px;
+
+    div{
+        margin: 14px 0;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+        display: none;
 }

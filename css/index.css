@@ -379,8 +379,9 @@ footer p {
 
 .slide-1 {
   width: 100%;
-  position: relative;
   margin-bottom: 6px;
+  overflow: hidden;
+  position: relative;
 }
 
 .slide-1 .s1-nav {
@@ -402,6 +403,7 @@ footer p {
   position: absolute;
   left: 4%;
   top: 34%;
+  z-index: 100;
 }
 
 .slide-1 .s1-nav span {
@@ -418,16 +420,17 @@ footer p {
   border: 1px solid #adadad;
   -webkit-transform: scaleY(0.4);
           transform: scaleY(0.4);
-  position: relative;
 }
 
-.slide-1 .s1-nav span:nth-of-type(2)::after {
-  content: '';
-  width: 33%;
+.slide-1 .s1-nav span:nth-of-type(2) span {
+  width: 33.3%;
+  background: #fff;
   border: 1px solid #fff;
   position: absolute;
   left: -1px;
   top: -1px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .slide-1 .s1-nav span:nth-of-type(3) {
@@ -443,12 +446,28 @@ footer p {
           transform: rotate(-90deg);
   position: absolute;
   right: 0;
-  bottom: 65px;
+  bottom: 180px;
+  z-index: 100;
 }
 
 .slide-1 .s1-img {
+  position: relative;
+}
+
+.slide-1 .s1-img a {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.slide-1 .s1-img a:nth-of-type(1) {
+  z-index: 2;
+}
+
+.slide-1 .s1-img a:nth-of-type(2) {
+  z-index: 1;
 }
 
 .slide-2 {
