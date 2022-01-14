@@ -44,6 +44,15 @@ table {
   border-spacing: 0;
 }
 
+input, button {
+  border: none;
+  background: none;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
 body {
   width: 100%;
   max-width: 760px;
@@ -172,8 +181,6 @@ header .menu.active {
 header .menu .bg {
   width: 200%;
   height: 100vh;
-  -webkit-transition: 1s;
-  transition: 1s;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }

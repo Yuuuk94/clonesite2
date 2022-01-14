@@ -79,28 +79,100 @@
 }
 .logtype{
     width: 100%;
-    padding: 30px 15px 10px;
-    display: flex;
-    span{
-        width: 50%;
-        margin-bottom: 10px;
-        display: inline-block;
-        text-align: center;
-    }
+    padding: 30px 14px 10px;
+    ul{
+        display: flex;
+        border-bottom: 2px solid $sbw;
+        li{
+            width: 50%;
+            padding-bottom: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        li.active{
+            border-bottom: 2px solid $b;
+            transform: translateY(2px);
+        }
+    }   
 }
 .mem{
-    text-align: center;
+    margin: 0 14px;
     form{
         display: flex;
         flex-direction: column;
-        justify-content: left;
         align-items: left;
+        justify-content: center;
+        input{
+            padding: 8px 6px;
+            border-bottom: 1px solid $sbw;
+        }
+        label{
+            padding: 12px 0;
+            line-height: center;
+            cursor: pointer;
+            input[type="radio"]{
+                display: none;
+            }
+            input[type="radio"]+span{
+                margin-left: 28px;
+                position: relative;
+            }
+            input[type="radio"] + span::after{
+                content: '';
+                width: 20px; height: 20px;
+                border: 1px solid $b;
+                border-radius: 100%;
+                position: absolute;
+                left: -28px; top: -1px;
+            }
+            input[type="radio"]:checked + span::after{
+                background: url('../img/login/m-checkbox-on.png') no-repeat center;
+                background-size: 100%;
+            }
+        }
+        button{
+            margin: 15px 0;
+            padding: 12px;
+            font-weight: bold;
+            color: $w;
+            background-color: $mc;
+            border-radius: 40px;
+        }
+    }
+    .mem-join{
+        text-align: center;
+        padding: 0 auto;
+        a{
+            margin: 0 14px;
+            color: $sb;
+            position: relative;
+        }
+        a:nth-of-type(1),a:nth-of-type(2){
+            &::after{
+                content: '';
+                height: 10px;
+                border: 1px solid $sbw;
+                transform: scaleX(.5);
+                position: absolute;
+                right: -18px; top: 4px;
+            }
+        }
     }
     section{
+        margin: 24px 0;
+        margin-bottom: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        h3{
+            margin: 12px 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        a{
+            margin: 6px 0;
+        }
     }
 }
 .nomem{

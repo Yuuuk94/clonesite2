@@ -34,6 +34,13 @@ table {
     border-collapse: collapse;
 	border-spacing: 0;
 }
+input, button{
+    border: none;
+    background: none;
+    &:focus{
+        outline: none;
+    }
+}
 
 // color
 $mc: #003594;
@@ -144,7 +151,7 @@ header{
         }
         .bg {
             width: 200%; height: 100vh;
-            transition: 1s;
+            // transition: 1s;
             background-color: rgba(0, 0, 0, 0.8);
             display: none;
             &.active{

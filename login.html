@@ -27,26 +27,28 @@
         <div class="">
             <h2 class="title" data-content="LOGIN*">login*</h2>
         </div>
-        <p class="logtype">
-            <span>로그인</span>
-            <span>비회원 주문조회</span>
-        </p>
+        <div class="logtype">
+            <ul>
+                <li class="active">로그인</li>
+                <li>비회원 주문조회</li>
+            </ul>
+        </div>
         <div class="mem">
             <form action="#">
-                <input type="text">
-                <input type="text">
-                <input type="radio">
-                <input type="submit">
+                <input type="id" placeholder="아이디">
+                <input type="password" placeholder="비밀번호">
+                <label><input type="radio"><span>아이디 저장</span></label>
+                <button type="submit">로그인</button>
             </form>
-            <p>
-                <span>회원가입</span>
-                <span>아이디찾기</span>
-                <span>비밀번호찾기</span>
-            </p>
+            <div class="mem-join">
+                <a href="#">회원가입</a>
+                <a href="#">아이디찾기</a>
+                <a href="#">비밀번호찾기</a>
+            </div>
             <section>
                 <h3>sns계정으로 간편가입</h3>
-                <button>네이버로 로그인하기</button>
-                <button>카카오로 로그인하기</button>
+                <a href="#"><img src="./img/login/btn-naver.png" alt=""></a>
+                <a href="#"><img src="./img/login/btn-kakao.png" alt=""></a>
             </section>
         </div>
         <div class="nomem">

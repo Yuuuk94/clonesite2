@@ -44,6 +44,15 @@ table {
   border-spacing: 0;
 }
 
+input, button {
+  border: none;
+  background: none;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
 body {
   width: 100%;
   max-width: 760px;
@@ -172,8 +181,6 @@ header .menu.active {
 header .menu .bg {
   width: 200%;
   height: 100vh;
-  -webkit-transition: 1s;
-  transition: 1s;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
@@ -672,21 +679,31 @@ footer p {
 
 .logtype {
   width: 100%;
-  padding: 30px 15px 10px;
+  padding: 30px 14px 10px;
+}
+
+.logtype ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 2px solid #cdcdcd;
 }
 
-.logtype span {
+.logtype ul li {
   width: 50%;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   display: inline-block;
   text-align: center;
 }
 
+.logtype ul li.active {
+  border-bottom: 2px solid #000;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
 .mem {
-  text-align: center;
+  margin: 0 14px;
 }
 
 .mem form {
@@ -697,15 +714,84 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mem form input {
+  padding: 8px 6px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.mem form label {
+  padding: 12px 0;
+  line-height: center;
+  cursor: pointer;
+}
+
+.mem form label input[type="radio"] {
+  display: none;
+}
+
+.mem form label input[type="radio"] + span {
+  margin-left: 28px;
+  position: relative;
+}
+
+.mem form label input[type="radio"] + span::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  position: absolute;
+  left: -28px;
+  top: -1px;
+}
+
+.mem form label input[type="radio"]:checked + span::after {
+  background: url("../img/login/m-checkbox-on.png") no-repeat center;
+  background-size: 100%;
+}
+
+.mem form button {
+  margin: 15px 0;
+  padding: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #003594;
+  border-radius: 40px;
+}
+
+.mem .mem-join {
+  text-align: center;
+  padding: 0 auto;
+}
+
+.mem .mem-join a {
+  margin: 0 14px;
+  color: #adadad;
+  position: relative;
+}
+
+.mem .mem-join a:nth-of-type(1)::after, .mem .mem-join a:nth-of-type(2)::after {
+  content: '';
+  height: 10px;
+  border: 1px solid #cdcdcd;
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+  position: absolute;
+  right: -18px;
+  top: 4px;
 }
 
 .mem section {
+  margin: 24px 0;
+  margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,6 +805,16 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.mem section h3 {
+  margin: 12px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.mem section a {
+  margin: 6px 0;
 }
 
 .nomem {
