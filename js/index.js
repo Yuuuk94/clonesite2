@@ -6,9 +6,11 @@ loadAft = function(){
         $('.menu').removeClass('active');
     })
     $('.bugermenu').on('click',function(){
-        $('.menu').addClass('active');
+        $('.menu')
+        .addClass('active');
         $('.bg').addClass('active');
-        $('.mobile-menu').addClass('active');
+        $('.mobile-menu')
+        .addClass('active');
     })
 
 }
@@ -19,34 +21,43 @@ $('body')
 $('header').load('incom.html header >div',loadAft);
 $('footer').load('incom.html footer >div');
 
-let Bn1 = '',Bn2 = '', num=0, lengthBn1, interval;
+
+
+//main page
+let Bn1 = '',Bn2 = '', num=0, lengthBn1, lengthBn2, interval;
 $.ajax({
     url:'./js/data.json',
     success:function(data){
         // 첫번째 베너
         lengthBn1=data.mainBn1.length;
         $.each(data.mainBn1,function(k, v){
-            Bn1 += `<a href="#" style="background: url("${v.src}")">
-                        <img src="${v.src}" alt="#"/>
+            Bn1 += `<a href="#">
+                        <div style="background-image:url('${v.src}');">
+                            <img src="${v.src}" alt="#"/>
+                        </div>
                     </a>`;
         });
         $('.s1-img')
-        .html(Bn1)
-        .css({
-            'width':`${lengthBn1*100}%`
-        });
-        $('.s1-img a')        
-        .css({
-            'width':`${100/lengthBn1}%`
-        });
+        .html(Bn1);
+
         $('.s1-nav span').eq(3).text(`0${lengthBn1}`);
-        let clearInterval = function(){
+        let clear = function(){
             clearInterval(interval);
         };
         interval = setInterval(function(){
-            clearInterval;
+            clear;
             $('.s1-img a').eq(num).fadeOut(500);
             num++;
+            $('.s1-img img').animate({
+                opacity:'.4',
+                marginBottom:'10px',
+                marginLeft:'10px'
+            }, 500, function(){
+                $(this).animate({
+                    opacity:'1',
+                    margin:'0',
+                },500)
+            });
             $('.s1-nav span').eq(0).text(`0${num+1}`);
             $('.s1-nav span span').css({
                 'width':`${(num+1)*34}%`
@@ -60,34 +71,63 @@ $.ajax({
             });
         }, 5000);
 
-        // interval = setInterval(function(){
-        //     $('.s1-img a').eq(num).fadeOut(500);
-        //     num++;
-        //     $('.s1-nav span').eq(0).text(`0${num+1}`);
-        //     $('.s1-nav span span').css({
-        //         'width':`${(num+1)*33.3}%`
-        //     });
-        //     if(num==lengthBn1)
-        //     num=0;
-        //     $('.s1-img a').eq(num).fadeIn(500);
-        //     $('.s1-nav span').eq(0).text(`0${num+1}`);
-        //     $('.s1-nav span span').css({
-        //         'width':`${(num+1)*33.6}%`
-        //     });
-        // }, 5000);
-        
         //두번째 베너 
         $.each(data.mainBn2,function(k, v){
-            Bn2 += `<p><img src="${v.src}" alt="#"/></p>`;
+            Bn2 += `<p>
+                        <img src="${v.src}" alt="#"/>
+                    </p>`;
         })
+        $(window).on('scroll',function(){
+            if($('html').scrollTop() >= 300){
+                
+                setTimeout(function(){
+                    $('.s2-nav').css({
+                        'display':'inline-block'
+                    })
+                    $('.s2-img').css({
+                        'display':'flex'
+                    });
+                    $('.slide-2').css({
+                        'margin':'0'
+                    });
+                },1000);
+            }
+            
+        })
+        let dPos = {x:0, dx:0, dir:'left'};
+        lengthBn2 = data.mainBn2.length;
         $('.s2-img')
         .html(Bn2)
-        .on('click',function(){
-            $(this).toggleClass('active');
-            $('.s2-nav span').toggleClass('active');
+        .css({
+            'width' : `calc(${lengthBn2*100}% + ${lengthBn2*20}px)`
         });
-
-
+        
+        $('.s2-img p').css({'width':`${100/lengthBn2}%`});
+        $('.s2-img').draggable({
+            axis: 'x',
+            revert: function(){
+                dPos.dir = (dPos.x > dPos.dx) ? 'left':'right';
+            },
+            start:function(e){
+                dPos.x=e.pageX;
+            },
+            drag:function(e){
+                dPos.dx = e.pageX;
+            },
+            stop:function(){
+                if(dPos.dir=='left'){
+                    $('.s2-img').animate({
+                        left:`-${102.6}%`
+                    });
+                    $('.s2-nav span').addClass('active');
+                }else{
+                    $('.s2-img').animate({
+                        left:`0%`
+                    });
+                    $('.s2-nav span').removeClass('active');
+                }
+            }
+        });
     }
 });
 
