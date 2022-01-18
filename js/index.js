@@ -50,8 +50,8 @@ $.ajax({
             num++;
             $('.s1-img img').animate({
                 opacity:'.4',
-                marginBottom:'10px',
-                marginLeft:'10px'
+                marginBottom:'1%',
+                marginLeft:'1%'
             }, 500, function(){
                 $(this).animate({
                     opacity:'1',
@@ -78,7 +78,7 @@ $.ajax({
                     </p>`;
         })
         $(window).on('scroll',function(){
-            if($('html').scrollTop() >= 300){
+            if($('html').scrollTop() >= 30){
                 
                 setTimeout(function(){
                     $('.s2-nav').css({
@@ -95,13 +95,13 @@ $.ajax({
             
         })
         let dPos = {x:0, dx:0, dir:'left'};
+        let img2Width = 0;
         lengthBn2 = data.mainBn2.length;
         $('.s2-img')
         .html(Bn2)
         .css({
             'width' : `calc(${lengthBn2*100}% + ${lengthBn2*20}px)`
         });
-        
         $('.s2-img p').css({'width':`${100/lengthBn2}%`});
         $('.s2-img').draggable({
             axis: 'x',
@@ -110,6 +110,7 @@ $.ajax({
             },
             start:function(e){
                 dPos.x=e.pageX;
+                img2Width = $('.s2-img').width();
             },
             drag:function(e){
                 dPos.dx = e.pageX;
@@ -117,12 +118,12 @@ $.ajax({
             stop:function(){
                 if(dPos.dir=='left'){
                     $('.s2-img').animate({
-                        left:`-${102.6}%`
+                        left:`-${img2Width/2}`
                     });
                     $('.s2-nav span').addClass('active');
                 }else{
                     $('.s2-img').animate({
-                        left:`0%`
+                        left:`0`
                     });
                     $('.s2-nav span').removeClass('active');
                 }
