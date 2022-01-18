@@ -1,11 +1,17 @@
 let loadAft;
 loadAft = function(){
     $('.x').on('click', function(){
+        $('body').css({
+            'overflow':'auto'
+        });
         $('.mobile-menu').removeClass('active');
         $('.bg').removeClass('active');
         $('.menu').removeClass('active');
     })
     $('.bugermenu').on('click',function(){
+        $('body').css({
+            'overflow':'hidden'
+        });
         $('.menu')
         .addClass('active');
         $('.bg').addClass('active');

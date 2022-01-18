@@ -7,5 +7,35 @@
     "mainBn2":[
         {"src": "./img/main/main2-1.jpg"},
         {"src": "./img/main/main2-2.jpg"}
+    ],
+    "goodslist1":[
+        {"thum":"./img/newcollection/new1.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 01", "price":"329000"},
+        {"thum":"./img/newcollection/new2.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 02", "price":"459000"},
+        {"thum":"./img/newcollection/new3.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 03", "price":"329000"},
+        {"thum":"./img/newcollection/new4.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 04", "price":"559000"},
+        {"thum":"./img/newcollection/new5.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 05", "price":"329000"},
+        {"thum":"./img/newcollection/new6.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 06", "price":"459000"},
+        {"thum":"./img/newcollection/new7.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 07", "price":"329000"},
+        {"thum":"./img/newcollection/new8.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 08", "price":"559000"},
+        {"thum":"./img/newcollection/new9.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 09", "price":"559000"},
+        {"thum":"./img/newcollection/new10.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 10", "price":"329000"},
+        {"thum":"./img/newcollection/new11.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 11", "price":"559000"},
+        {"thum":"./img/newcollection/new12.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 12", "price":"459000"},
+        {"thum":"./img/newcollection/new13.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 13", "price":"329000"},
+        {"thum":"./img/newcollection/new14.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 14", "price":"559000"},
+        {"thum":"./img/newcollection/new15.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 15", "price":"559000"},
+        {"thum":"./img/newcollection/new16.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 16", "price":"329000"},
+        {"thum":"./img/newcollection/new17.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 17", "price":"459000"},
+        {"thum":"./img/newcollection/new18.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 18", "price":"559000"},
+        {"thum":"./img/newcollection/new19.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 19", "price":"329000"},
+        {"thum":"./img/newcollection/new20.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 20", "price":"459000"},
+        {"thum":"./img/newcollection/new21.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 21", "price":"559000"},
+        {"thum":"./img/newcollection/new22.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 22", "price":"329000"},
+        {"thum":"./img/newcollection/new23.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 23", "price":"459000"},
+        {"thum":"./img/newcollection/new24.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 24", "price":"559000"},
+        {"thum":"./img/newcollection/new25.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 25", "price":"329000"},
+        {"thum":"./img/newcollection/new26.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 26", "price":"459000"},
+        {"thum":"./img/newcollection/new27.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 27", "price":"559000"},
+        {"thum":"./img/newcollection/new28.jpg", "src":"", "name":"NSAD* THINDOWN HOODY JACKET 28", "price":"329000"}
     ]
 }

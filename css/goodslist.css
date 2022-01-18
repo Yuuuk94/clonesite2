@@ -237,6 +237,17 @@ header .menu .x span:nth-of-type(2) {
           transform: rotate(-45deg);
 }
 
+header .menu .m-wrap {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+header .menu .m-wrap::-webkit-scrollbar {
+  display: none;
+}
+
 header .menu .s-title {
   width: 168px;
   margin-bottom: 46px;
@@ -587,7 +598,12 @@ footer p {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 54px;
+  top: 58px;
+}
+
+.goods-list .menubar div {
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 
 .goods-list .menubar span {
@@ -644,12 +660,16 @@ footer p {
 }
 
 .list-show {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .list-show figure {
+  width: 50%;
   text-align: center;
 }
 

@@ -237,6 +237,17 @@ header .menu .x span:nth-of-type(2) {
           transform: rotate(-45deg);
 }
 
+header .menu .m-wrap {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+header .menu .m-wrap::-webkit-scrollbar {
+  display: none;
+}
+
 header .menu .s-title {
   width: 168px;
   margin-bottom: 46px;

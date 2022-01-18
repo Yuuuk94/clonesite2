@@ -190,6 +190,15 @@ header{
                 }
             }
         }
+        .m-wrap{
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar{
+                display:none; 
+            }
+        }
         .s-title{
             width: 168px;
             margin-bottom: 46px;
@@ -197,7 +206,6 @@ header{
         .m-list{
             margin-bottom: 38px;
             color: $w;
-
             li{
                 margin-bottom: 6px;
             }
