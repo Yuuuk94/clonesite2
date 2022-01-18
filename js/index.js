@@ -1,34 +1,3 @@
-let loadAft;
-loadAft = function(){
-    $('.x').on('click', function(){
-        $('body').css({
-            'overflow':'auto'
-        });
-        $('.mobile-menu').removeClass('active');
-        $('.bg').removeClass('active');
-        $('.menu').removeClass('active');
-    })
-    $('.bugermenu').on('click',function(){
-        $('body').css({
-            'overflow':'hidden'
-        });
-        $('.menu')
-        .addClass('active');
-        $('.bg').addClass('active');
-        $('.mobile-menu')
-        .addClass('active');
-    })
-
-}
-$('body')
-.prepend('<header></header>')
-.append('<footer></footer>');
-
-$('header').load('incom.html header >div',loadAft);
-$('footer').load('incom.html footer >div');
-
-
-
 //main page
 let Bn1 = '',Bn2 = '', num=0, lengthBn1, lengthBn2, interval;
 $.ajax({
@@ -51,7 +20,7 @@ $.ajax({
             clearInterval(interval);
         };
         interval = setInterval(function(){
-            clear;
+            clear();
             $('.s1-img a').eq(num).fadeOut(500);
             num++;
             $('.s1-img img').animate({
@@ -84,7 +53,7 @@ $.ajax({
                     </p>`;
         })
         $(window).on('scroll',function(){
-            if($('html').scrollTop() >= 30){
+            if($('html').scrollTop() >= 40){
                 
                 setTimeout(function(){
                     $('.s2-nav').css({

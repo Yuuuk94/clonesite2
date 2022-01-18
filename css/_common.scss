@@ -17,7 +17,7 @@
 
 html, body, header, main, footer, 
 h1, h2, h3, h4, h5, h6, figure, 
-div, span, p, a, input{
+div, span, p, a, input, dl, dt, dd{
     margin: 0; padding: 0;
 }
 img, video, iframe{
@@ -125,13 +125,13 @@ header{
         span:nth-of-type(1){
             width: 16px;
             position: relative;
-            &::after{
-                content: '0';
-                width: 13px; height: 13px;
+            span{
+                width: 14px; height: 14px;
+                padding: 1px 0;
                 background-color: $mc;
                 border-radius: 100%;
                 color: $w;
-                font-size: 11px;
+                font-size: 8px;
                 text-align: center;
                 line-height: 1;
                 display: block;
@@ -151,7 +151,6 @@ header{
         }
         .bg {
             width: 200%; height: 100vh;
-            // transition: 1s;
             background-color: rgba(0, 0, 0, 0.8);
             display: none;
             &.active{

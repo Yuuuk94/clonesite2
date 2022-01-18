@@ -15,7 +15,7 @@
 
 html, body, header, main, footer,
 h1, h2, h3, h4, h5, h6, figure,
-div, span, p, a, input {
+div, span, p, a, input, dl, dt, dd {
   margin: 0;
   padding: 0;
 }
@@ -147,14 +147,14 @@ header .icon span:nth-of-type(1) {
   position: relative;
 }
 
-header .icon span:nth-of-type(1)::after {
-  content: '0';
-  width: 13px;
-  height: 13px;
+header .icon span:nth-of-type(1) span {
+  width: 14px;
+  height: 14px;
+  padding: 1px 0;
   background-color: #003594;
   border-radius: 100%;
   color: #fff;
-  font-size: 11px;
+  font-size: 8px;
   text-align: center;
   line-height: 1;
   display: block;

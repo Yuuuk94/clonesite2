@@ -6,7 +6,7 @@
         width: 100%;
         text-align: center;
         position: absolute;
-        left: -4px; top: 242px;
+        left: -4px; top: 38%;
         &::after{
             content: '';
             border: 2px solid $w;
@@ -73,7 +73,7 @@
     width: 100%;
     background-color: $w;
     border-radius: 40px;
-    transform: translateY(-36px);
+    transform: translateY(-100px);
     .menubar{
         padding: 20px 30px;
         background-color: $w;
