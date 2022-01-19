@@ -24,26 +24,14 @@ let item='', index=0, price='', detail1='', dname='', total=0;
 $.ajax({
     url:'./js/data.json',
     success:function(data){
-        $.each(data.goodslist1, function(k, v){
-            item += `<figure>
-                        <a href="goodsdetail.html">
-                            <p><img src="${v.thum}" alt=""></p>
-                            <h3>${v.name}</h3>
-                            <figcaption>￦<span>${v.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</span></figcaption>
-                        </a>
-                    </figure>`;
-        })
-        $('.list-show').html(item);
+        detail1 = `<p><img src="${data.goodsdetail1[localStorage.num].baner1}" alt="#"></p>
+                <p><img src="${data.goodsdetail1[localStorage.num].baner2}" alt="#"></p>`;
+        dname = `${data.goodslist1[localStorage.num].name}`;
+        price = `${data.goodslist1[localStorage.num].price}`;
 
-        total = data.goodslist1.length;
-        $('.bar p span').html(total);
-
-        $('.list-show figure').on('click', function(e){
-            e.preventDefault();
-            localStorage.num = $(this).index();
-            location.href = $('.list-show figure a').attr('href');
-        });
-
+        $('.d-img').html(detail1);
+        $('.d-title h2').html(dname);
+        $('.d-title span').html(price);
     }
 })
 
@@ -51,6 +39,7 @@ $.ajax({
 
 let dPos = {x:0, dx:0, dir:'left'};
 let imgWidth;
+
 
 $('.d-img').draggable({
     axis: 'x',
