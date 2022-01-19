@@ -20,7 +20,7 @@ $.ajax({
             clearInterval(interval);
         };
         interval = setInterval(function(){
-            clear();
+            clear;
             $('.s1-img a').eq(num).fadeOut(500);
             num++;
             $('.s1-img img').animate({
