@@ -401,6 +401,10 @@ footer p {
   display: flex;
 }
 
+.detail-banner .d-img p {
+  width: 100%;
+}
+
 .detail-banner .d-nav {
   position: absolute;
   left: calc(50% - 24px);
