@@ -12,8 +12,7 @@ $.ajax({
                         </div>
                     </a>`;
         });
-        $('.s1-img')
-        .html(Bn1);
+        $('.s1-img').html(Bn1);
 
         $('.s1-nav span').eq(3).text(`0${lengthBn1}`);
         let clear = function(){

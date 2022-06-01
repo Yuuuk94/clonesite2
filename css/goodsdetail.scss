@@ -29,7 +29,7 @@
 .detail-contents{
     margin: 20px 0;
     border-radius: 50px;
-    box-shadow: 0 -2px 2px $sw;
+    box-shadow: 0 -4px 4px $sw;
     .d-title{
         padding: 30px 30px 20px;
         position: relative;
@@ -87,8 +87,10 @@
             justify-content: space-between;
             border-bottom: 1px solid $sb;
             li{
-                margin: 20px 30px 10px;
+                width: 25%;
+                margin: 20px 0 10px;
                 color: $sb;
+                text-align: center;
                 &.active{
                     color: $b;
                     position: relative;
@@ -96,10 +98,10 @@
             }
             li.active::after{
                 content: '';
-                width: 220%;
+                width: 100%;
                 border-bottom: 2px solid $b;
                 position: absolute;
-                left: -60%; bottom: -11px;
+                left: 0; bottom: -11px;
             }
         }
         .d-subtext{
@@ -149,11 +151,46 @@
     }
 }
 .gocart{
-    .gofixed{
+    .cart-option{
         width: 100%;
-        display: flex;
+        padding: 50px 40px 100px;
+        background-color: #fff;
+        border-radius: 60px;
+        box-shadow: 0 -4px 4px $sb;
+        transition: .5s;
         position: fixed;
         left: 0; bottom: 0;
+        transform: translateY(500px);
+        .option-close{
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            span:nth-of-type(1){
+                width: 10px;
+                border: 1px solid $sb;
+                display: inline-block;
+                transform: rotate(45deg);
+                position: absolute;
+                left: calc(50% - 3px); top: -30px;
+            }
+            span:nth-of-type(2){
+                width: 10px;
+                border: 1px solid $sb;
+                display: inline-block;
+                transform: rotate(-45deg);
+                position: absolute;
+                left: calc(50% + 3px); top: -30px;
+            }
+        }
+    }
+    .cart-option.active{
+        transform: translateY(0px);
+    }
+    .gofixed{
+        width: 100%;
+        position: fixed;    
+        left: 0; bottom: 0;
+        display: flex;
         p:nth-of-type(1){
             width: 84%;
             padding: 16px 0;

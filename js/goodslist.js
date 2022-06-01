@@ -1,4 +1,4 @@
-//스크롤 베너 타이틀 이벤트
+//스크롤 헤더
 let pos = {y:0, dy:0,state:true}
 $(window).on('scroll', function(){
     // 현재 스크롤 값
@@ -20,62 +20,49 @@ $(window).on('scroll', function(){
 
 // item list
 
-let item='', index=0, price='', detail1='', dname='', total=0;
-$.ajax({
-    url:'./js/data.json',
-    success:function(data){
-        $.each(data.goodslist1, function(k, v){
-            item += `<figure>
-                        <a href="goodsdetail.html">
-                            <p><img src="${v.thum}" alt=""></p>
-                            <h3>${v.name}</h3>
-                            <figcaption>￦<span>${v.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</span></figcaption>
-                        </a>
-                    </figure>`;
-        })
-        $('.list-show').html(item);
+let exChange = function(){
+    $.ajax({
+        url : './js/data.json',
+        success : function(data){
+            let item='', total=0;
+            let more = function(n,m){
+                $.each(data.goodslist1, function(k, v){
+                    if(k >= n && k < m){
+                        item += `<figure>
+                            <a href="goodsdetail.html">
+                                <p><img src="${v.thum}" alt=""></p>
+                                <h3>${v.name}</h3>
+                                <figcaption>￦<span>${v.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</span></figcaption>
+                            </a>
+                        </figure>`;
+                    }else{}
+                });
+                $('.list-show').html(item);
+            }
+            more(0, 8);
 
-        total = data.goodslist1.length;
-        $('.bar p span').html(total);
+            total = data.goodslist1.length;
+            $('.bar p span').html(total);
 
-        $('.list-show figure').on('click', function(e){
-            e.preventDefault();
-            localStorage.num = $(this).index();
-            location.href = $('.list-show figure a').attr('href');
-        });
-
-    }
-})
-
-
-
-let dPos = {x:0, dx:0, dir:'left'};
-let imgWidth;
-
-$('.d-img').draggable({
-    axis: 'x',
-    revert: function(){
-        dPos.dir = (dPos.x > dPos.dx) ? 'left':'right';
-    },
-    start:function(e){
-        dPos.x=e.pageX;
-        imgWidth = $('.d-img').width();
-    },
-    drag:function(e){
-        dPos.dx = e.pageX;
-    },
-    stop:function(){
-        if(dPos.dir=='left'){
-            $('.d-img').animate({
-                left:`-${imgWidth/2}`
+            $('.list-show figure').on('click', function(e){
+                e.preventDefault();
+                localStorage.num = $(this).index();
+                location.href = $('.list-show figure a').attr('href');
             });
-            $('.d-nav span').toggleClass('active');
-        }else{
-            $('.d-img').animate({
-                left:`0`
+
+            // more 버튼 클릭
+            let num = 1;
+            $('.show-more').on('click', function(){
+                num++;
+                more(num*8 - 8, num * 8);
+                console.log('a')
+                if(num*8 >= total){
+                    this.classList.add('active')
+                }
             });
-            $('.d-nav span').toggleClass('active');
         }
-    }
-});
+    })
+}
+exChange();
+
 

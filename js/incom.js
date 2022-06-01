@@ -1,5 +1,4 @@
-let loadAft;
-loadAft = function(){
+let clickMenu = function(){
     $('.x').on('click', function(){
         $('body').css({
             'overflow':'auto'
@@ -18,17 +17,20 @@ loadAft = function(){
         $('.mobile-menu')
         .addClass('active');
     })
-
 }
+
 $('body')
 .prepend('<header></header>')
 .append('<footer></footer>');
 
-$('header').load('incom.html header >div',loadAft);
+$('header').load('incom.html header >div', clickMenu);
 $('footer').load('incom.html footer >div');
 
-let count=0;
-$('.gofixed p').on('click',function(){
-    count+=1;
-    $('.icon span span').text(count);
-});
+// 장바구니 수량 표기
+let cartNm = 0;
+if(sessionStorage.getItem('count')){
+    cartNm = sessionStorage.getItem('count');
+    setTimeout(()=>{
+        $('.icon span span').text(cartNm);
+    },20)
+}

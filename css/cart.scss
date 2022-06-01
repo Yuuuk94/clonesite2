@@ -1,0 +1,32 @@
+@import '_common.scss';
+
+main{
+    text-align: center;
+}
+.cart-processe{
+    width: 100%;
+    margin: 30px auto;
+    span{
+        margin: 0 40px 0 10px;
+        color: $sb;
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        small{
+            font-size: 12px;
+            position: absolute;
+            right: -32px; top: 4px;
+        }
+    }
+    span.active{
+        color: $b;
+    }
+}
+.cart-content{
+    margin: 100px 0 200px;
+    display: none;
+}
+.cart-content.active{
+    display: inline-block;
+}
+
