@@ -90,13 +90,13 @@ $('.select-size').on('click', function(e){
 
         $('.option-list').append(`<div>
                         <p>${e.target.innerText}</p>
-                        <p>
+                        <p class="option-sum">
                             <button data-size=${e.target.innerText}>-</button>
                             <span>1</span>
                             <button data-size=${e.target.innerText}>+</button>
                         </p>
                         <p>₩ <span>${price}</span></p>
-                        <p data-size=${e.target.innerText}>X</p>
+                        <p data-size=${e.target.innerText} class="size-close">X</p>
                     </div>`);
 
         $('.option-total span').text(String(priceNm*sizeNm).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));

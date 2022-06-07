@@ -163,6 +163,7 @@
         transform: translateY(500px);
         .option-close{
             position: relative;
+            transform: translateY(10px);
             text-align: center;
             cursor: pointer;
             span:nth-of-type(1){
@@ -180,6 +181,61 @@
                 transform: rotate(-45deg);
                 position: absolute;
                 left: calc(50% + 3px); top: -30px;
+            }
+        }
+        .option-tit{
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        .option-size{
+            margin: 10px 0;
+            .size-tit{
+                font-weight: 700;
+            }
+            button{
+                margin: 4px 0;
+                padding: 4px 20px;
+                background-color: $sbw;
+                cursor: pointer;
+            }
+        }
+        .option-list div{
+            margin: 8px 0;
+            display: flex;
+            p, p span{
+                font-size: 16px;
+            }
+            .option-sum{
+                margin: 0 80px;
+                button{
+                    width: 24px;
+                    background-color: $sbw;
+                    border-radius: 100%;
+                    cursor: pointer;
+                }
+                span{
+                    margin: 0 20px;
+                }
+            }
+            .size-close{
+                position: absolute;
+                right: 20px;
+                cursor: pointer;
+            }
+        }
+        .option-total{
+            display: flex;
+            .total-tit{
+                font-size: 1.2em;
+                font-weight: 700;
+            }
+            .total-sum{
+                font-size: 2em;
+                position: absolute;
+                right: 20px;
+                span{
+                    font-size: 1em;
+                }
             }
         }
     }

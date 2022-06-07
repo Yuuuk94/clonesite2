@@ -911,6 +911,8 @@ footer p {
 
 .gocart .cart-option .option-close {
   position: relative;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   text-align: center;
   cursor: pointer;
 }
@@ -935,6 +937,79 @@ footer p {
   position: absolute;
   left: calc(50% + 3px);
   top: -30px;
+}
+
+.gocart .cart-option .option-tit {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.gocart .cart-option .option-size {
+  margin: 10px 0;
+}
+
+.gocart .cart-option .option-size .size-tit {
+  font-weight: 700;
+}
+
+.gocart .cart-option .option-size button {
+  margin: 4px 0;
+  padding: 4px 20px;
+  background-color: #cdcdcd;
+  cursor: pointer;
+}
+
+.gocart .cart-option .option-list div {
+  margin: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gocart .cart-option .option-list div p, .gocart .cart-option .option-list div p span {
+  font-size: 16px;
+}
+
+.gocart .cart-option .option-list div .option-sum {
+  margin: 0 80px;
+}
+
+.gocart .cart-option .option-list div .option-sum button {
+  width: 24px;
+  background-color: #cdcdcd;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.gocart .cart-option .option-list div .option-sum span {
+  margin: 0 20px;
+}
+
+.gocart .cart-option .option-list div .size-close {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.gocart .cart-option .option-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gocart .cart-option .option-total .total-tit {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.gocart .cart-option .option-total .total-sum {
+  font-size: 2em;
+  position: absolute;
+  right: 20px;
+}
+
+.gocart .cart-option .option-total .total-sum span {
+  font-size: 1em;
 }
 
 .gocart .cart-option.active {

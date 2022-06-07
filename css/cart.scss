@@ -29,4 +29,55 @@ main{
 .cart-content.active{
     display: inline-block;
 }
+.cart-item{
+    padding: 20px 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    .product-unit{
+        margin: 0 20px;
+        display: flex;
+        input{
+            margin: auto 0;
+        }
+        figure{
+            width: 20%;
+            margin: 0 20px;
+        }
+        .product-info{
+            text-align: left;
+            p{
+                margin: 4px 0;
+                font-size: 16px;
+                span{
+                    font-size: 16px;
+                }
+            }
+            .product-name{
+                font-size: 1.2em;
+                font-weight: 700;
+            }
+        }
+        .product-unit-close{
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            span:nth-of-type(1){
+                width: 20px;
+                border: 1px solid $sb;
+                display: inline-block;
+                transform: rotate(45deg);
+                position: absolute;
+                left: 40px; top: 50%;
+            }
+            span:nth-of-type(2){
+                width: 20px;
+                border: 1px solid $sb;
+                display: inline-block;
+                transform: rotate(-45deg);
+                position: absolute;
+                left: 40px; top: 50%;
+            }
+        }
+    }
+}
 
